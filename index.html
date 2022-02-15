@@ -86,7 +86,7 @@
     <meta name="description" content="" />
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
     <meta name="generator" content="Jekyll v3.8.5" />
-    <title>Blog Template · Bootstrap</title>
+    <title style="color: red">Blog Template · Bootstrap</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/blog/" />
 
@@ -456,6 +456,55 @@
           EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
           EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
       */
+
+    //EX11) Write a function to add a new link into the navbar
+    const newLink = () => {
+        let newNavLink = document.createElement('a')
+        newNavLink.classList.add('p-2', 'text-muted')
+        newNavLink.innerText = 'WWW'
+
+        document.getElementsByTagName('nav')[0].appendChild(newNavLink)
+
+    }
+    newLink()
+    // EX12) Write a function to change the color of the main title
+    document.getElementsByTagName('h1')[0].style.color = 'red'
+
+
+    // EX13) Write a function to change the background of the jumbotron
+    document.getElementsByClassName('jumbotron')[0].style.backgroundColor = 'green', '!important'
+
+
+    // EX14) Write a function to remove all the links under "Elsewhere"
+    const removeAllLink = () => {
+        let lists = document.getElementsByClassName('list-unstyled')[1].remove()
+    }
+    // removeAllLink()
+
+
+    // EX15) Write a function to change the column size for heading in jumbotron
+    const changeSizeOfJumbotron = () => {
+        document.getElementsByClassName('jumbotron')[0].style.height = '50px'
+    }
+
+    // EX16) Write a function to remove the "Search" magnifying glass icon
+    const removeSearch = () => {
+        document.getElementsByClassName('text-muted')[1].remove()
+    }
+
+    // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+    const trim = () => {
+        for (let i = 0; i < 3; i++) {
+            let blog = document.getElementsByClassName('blog-post')
+            blog[i].childNodes[5].style.color = 'yellow'
+        }
+
+
+    }
+
+
+
+    addPost()
     </script>
 </body>
 
